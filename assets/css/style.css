@@ -427,6 +427,42 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #182b47 !important; }
+
+a { color: #b8b8b8 !important; }
+
+a:hover { color: rgba(255, 255, 255, 0.87) !important; }
+
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
+
+.site-nav { background-color: #182b47; border-color: #384961; }
+
+* { scrollbar-color: #182b47 #384961; }
+
+pre, code { border-color: #384961; background-color: #243650; }
+
+.page-description { color: rgba(255, 255, 255, 0.69); }
+
+.post-meta { color: rgba(255, 255, 255, 0.38); }
+
+.post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
+
+.btn { background-color: #243650 !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #384961 !important; }
+
+.btn:hover { background-color: #182b47 !important; }
+
+table th { background-color: #243650; border-color: #384961; color: rgba(255, 255, 255, 0.87); }
+
+table td { background-color: #182b47; border-color: #384961; color: rgba(255, 255, 255, 0.69); }
+
+.flash { color: #182b47 !important; filter: brightness(80%); }
+
+canvas { filter: invert(100%); }
+
+.post-list > li > div { box-shadow: none !important; background-color: #243650; border: none !important; }
+
+li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
+
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
 [class^="language-"]:not(.language-plaintext) pre, [class^="language-"]:not(.language-plaintext) code { background-color: #323443 !important; color: #f8f8f2; }
