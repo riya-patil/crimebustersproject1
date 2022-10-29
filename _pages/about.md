@@ -4,7 +4,7 @@ title: Team
 permalink: /about/
 ---
 
-Scrum Master: Vidhi Kulkarni
-Frontend Developer: Riya Patil
-Backend Developer: William Wu
-DevOps: Lily Wu
+<p>Scrum Master: Vidhi Kulkarni</p>
+<p>Frontend Developer: Riya Patil</p>
+<p>Backend Developer: William Wu</p>
+<p>DevOps: Lily Wu</p>
