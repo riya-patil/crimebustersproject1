@@ -5,7 +5,7 @@ title: World Map
 search_exclude: true
 ---
 
-<!DOCTYPE html>
+<!DOCTYPE md>
 <html lan="en">
     <head>
     <meta charset="utf-8" />
