@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: /safetyscorecalculator/
+title: Safety Score Calculator
+search_exclude: false
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Gravitational Calculators </title>
+    <style>
+        title {
+            display: "Gravitation Calculator";
+            font-family: 'Lucida Sans';
+        }
+        input {
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Lucida Sans';
+        }
+        label {
+            font-weight: bold;
+            font-family: 'Lucida Sans';
+    
+        }
+    </style>
+</head>
+<h1> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+    Gravitation Calculator </h1>
+    </p>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="crimescore">
+            Number of Crimes: <input type="text" name="crimenum">
+            <br>
+            Total Number of People: <input type="text" name="people">
+            <br>
+            Total Crime Score: <input type="text" name="totcs">
+            <br>
+            <input type="button" value="Calculate!" onclick="findCrime()" >
+        </form>
+        <script type="text/javascript">
+           function findCrime()
+           {
+            var cn, pn;
+            cn=Number(document.crimescore.crimenum.value);
+            pn=Number(document.crimescore.people.value);
+            finalcrimescore=((cn)/(pn));
+            document.crimescore.totcs.value=finalcrimescore;
+           } 
+        </script> 
+    </div>
+</body>
+</html>
