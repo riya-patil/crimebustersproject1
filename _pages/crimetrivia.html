@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "layouts/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Interview Questions!</title>
+
+</head>
+<body>
+    <h2>Generate A Random Interview Question</h2>
+    <p>Practice for an upcoming interview!</p>
+
+    <button onClick="window.location.reload();">Refresh</button>
+    <p id="demo"></p>
+    <script>
+        function rand_quest(items)
+        {
+
+            return items[Math.floor(Math.random()*items.length)];
+
+        }
+        var questions = [
+            "From July 1, 2018, through June 30, 2019, a total of 39 school-associated violent deaths1 occurred in the United States, including students, staff, and other nonstudent school-associated victims. Of these 39 school-associated violent deaths, 10 homicides and 3 suicides were of school-age youth (ages 5–18, also referred to as “youth” in this Fast Fact).2 Considering all persons, there were 29 homicides and 10 suicides. Between 1992–93 (when data collection began) and 2018–19, the number of school-associated violent deaths of all persons fluctuated, ranging from 32 to 63.",
+            "During the 2019–20 school year,5 77 percent of public schools recorded that one or more incidents of crime had taken place, amounting to 1.4 million incidents. This translates to a rate of 29 incidents per 1,000 students enrolled in 2019–20. Not all recorded incidents of crime were reported to sworn law enforcement. In 2019–20, some 47 percent of schools reported one or more incidents of crime to sworn law enforcement, amounting to 482,400 incidents, or 10 incidents per 1,000 students enrolled.",
+            "From 2009 to 2020, the total victimization rate decreased for students ages 12–18, both at school and away from school.3 The total victimization rate at school decreased from 51 victimizations per 1,000 students in 2009 to 30 victimizations per 1,000 students in 2019. From 2019 to 2020, the total victimization rate at school continued to decrease to 11 victimizations per 1,000 students—a decrease of more than 60 percent.4 The total victimization rate away from school decreased from 33 victimizations per 1,000 students in 2009 to 20 victimizations per 1,000 students in 2019. The total victimization rate away from school in 2020 (15 victimizations per 1,000 students) was not statistically different from the rate in 2019.",
+            "In 21.9% of all cases, the offender was convicted of an offense carrying a mandatory minimum penalty",
+        ];
+        document.getElementById("demo").innerHTML = rand_quest(questions)
+    </script>
+</body>
+</html>
