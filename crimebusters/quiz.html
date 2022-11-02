@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Crime Safety Quiz (Work In Progress) | Crimebusters</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Crime Safety Quiz (Work In Progress)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quiz yourself on crime safety! A frontend display of quiz questions that connects to backend using Spring and Java." />
+<meta property="og:description" content="Quiz yourself on crime safety! A frontend display of quiz questions that connects to backend using Spring and Java." />
+<link rel="canonical" href="https://crimebusters.github.io/crimebustersproject1/crimebusters/quiz" />
+<meta property="og:url" content="https://crimebusters.github.io/crimebustersproject1/crimebusters/quiz" />
+<meta property="og:site_name" content="Crimebusters" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-22T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Crime Safety Quiz (Work In Progress)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-22T00:00:00-05:00","datePublished":"2022-10-22T00:00:00-05:00","description":"Quiz yourself on crime safety! A frontend display of quiz questions that connects to backend using Spring and Java.","headline":"Crime Safety Quiz (Work In Progress)","mainEntityOfPage":{"@type":"WebPage","@id":"https://crimebusters.github.io/crimebustersproject1/crimebusters/quiz"},"url":"https://crimebusters.github.io/crimebustersproject1/crimebusters/quiz"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/crimebustersproject1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://crimebusters.github.io/crimebustersproject1/feed.xml" title="Crimebusters" /><link rel="shortcut icon" type="image/x-icon" href="/crimebustersproject1/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/crimebustersproject1/">Crimebusters</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/crimebustersproject1/about/">About Team</a><a class="page-link" href="/crimebustersproject1/Quiz/">Safety Quiz</a><a class="page-link" href="/crimebustersproject1/search/">Search</a><a class="page-link" href="/crimebustersproject1/Map/">World Map</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="crime-safety-quiz-work-in-progress">Crime Safety Quiz (Work In Progress)</h1>
+
+<p>Quiz yourself on crime safety!</p>
+
+<p><strong>What this project currently does</strong>: Currently, the quiz is in a table that has two answer choices: A and B. The table records the number of times people selected the answer choice.</p>
+
+<p><strong>To be added</strong>:</p>
+<ul>
+  <li>We are going to add two more answer choices to the table (C and D), and connect them to the backend using Spring Framework. The number of times users selected C and D will also be saved in a MYSQL database.</li>
+  <li>After the user selects one of the answer choices, there will also be feedback given on whether the user selected the right or wrong answer choice. If the user selected the wrong answer, the correct answer will be displayed.</li>
+</ul>
+
+<p><br /></p>
+
+<p><mark>Note:</mark> If the table shows an error of <code>TypeError: Failed to fetch https://crimebusters.nighthawkcoding.ml/api/jokes/</code>, see if using a VPN works :)</p>
+
+<p><br /></p>
+
+<!-- HTML table fragment for page -->
+<table>
+  <thead>
+  <tr>
+    <th>Question</th>
+    <th>A</th>
+    <th>B</th>
+    <th>C</th>
+    <th>D</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
+
+<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
+<script>
+
+  // prepare HTML defined "result" container for new output
+  const resultContainer = document.getElementById("result");
+
+  // keys for joke reactions
+  const HAHA = "haha";
+  const BOOHOO = "boohoo";
+  const CHOICEC = "choiceC";
+  const CHOICED = "choiceD";
+
+
+
+  // prepare fetch urls
+  // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  const url = "https://crimebusters.nighthawkcoding.ml/api/jokes";
+  const get_url = url +"/";
+  const like_url = url + "/like/";  // haha reaction
+  const jeer_url = url + "/jeer/";  // boohoo reaction
+  const choiceC_url = url + "/choiceC/";  // choiceC option
+  const choiceD_url = url + "/choiceD/";  // choiceC option
+
+
+  // prepare fetch GET options
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+  // prepare fetch PUT options, clones with JS Spread Operator (...)
+  const put_options = {...options, method: 'PUT'}; // clones and replaces method
+
+  const answers = ["A. People are hesitant to call out of fear they will be identified by the potential criminal", "B. People take for granted that someone else has already contacted the police", "C. They worry about being embarrassed if their suspicions prove to be unfounded", "D. All of the above", "A. Charge at them and take care of it yourself", "B. Hide somewhere safe and call the police", "C. Give up your belongings and run from your house", "D. Don't do anything", "A. A vehicles moving slowly and without lights, or seemingly repetitive or suspicious", "B. Containing one or more suspicious people observed at an unusual hour.", "C. Vehicles being loaded with valuables in front of closed businesses or residences", "D. All of the above", "A. Run away in the other direction as fast as you can", "B. Give them your belongings and retreat a good distance away", "C. Adamantly refuse to listen to their demands", "D. Slowly back up at a slow pace and negotiate with the criminal"];
+  // fetch the API
+  fetch(get_url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error('GET API response failure: ' + response.status);
+          return;
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          var i = 0;
+          for (const row of data) {
+            if (i == 0) {
+              console.log("i = 0");
+            }
+            if (i == 1) {
+              console.log("i = 1");
+            }
+            // make "tr element" for each "row of data"
+            const tr = document.createElement("tr");
+            
+            // td for joke cell
+            const joke = document.createElement("td");
+              joke.innerHTML = row.id + ". " + row.joke + "<br />" + answers[i] + "<br />" + answers[i+1] + "<br />" + answers[i+2] + "<br />" + answers[i+3];  // add fetched data to innerHTML
+
+            // td for haha cell with onclick actions
+            const haha = document.createElement("td");
+              const haha_but = document.createElement('button');
+              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
+              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
+              haha_but.onclick = function () {
+                // onclick function call with "like parameters"
+                reaction(HAHA, like_url+row.id, haha_but.id);  
+                console.log(haha_but.id);
+                
+                for (let i = 1; i <= 4; i++) {
+                  if (haha_but.id == "haha".concat(String(i))) {
+                  alert('Incorrect. Try again.');
+                  }
+                }
+                
+               
+              };
+              haha.appendChild(haha_but);  // add "haha button" to haha cell
+
+            // td for boohoo cell with onclick actions
+            const boohoo = document.createElement("td");
+              const boohoo_but = document.createElement('button');
+              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
+              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
+              boohoo_but.onclick = function () {
+                // onclick function call with "jeer parameters"
+                console.log(boohoo_but.id);
+
+                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
+
+                if (boohoo_but.id == "boohoo2" || boohoo_but.id == "boohoo4")) {
+                  alert('Correct!');
+                }
+
+              };
+              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
+             
+             const choiceC = document.createElement("td");
+              const choiceC_but = document.createElement('button');
+              choiceC_but.id = CHOICEC+row.id  // establishes a BOOHOO JS id for cell
+              choiceC_but.innerHTML = row.choiceC;  // add fetched "boohoo count" to innerHTML
+              choiceC_but.onclick = function () {
+                // onclick function call with "jeer parameters"
+                console.log(choiceC_but.id);
+
+                reaction(CHOICEC, choiceC_url+row.id, choiceC_but.id); 
+                
+                for (let i = 1; i <= 4; i++) {
+                  if (choiceC_but.id == "choiceC".concat(String(i))) {
+                  alert('Incorrect. Try again.');
+                  }
+                }
+                
+              };
+             choiceC.appendChild(choiceC_but);  // add "boohoo button" to boohoo cell
+
+             const choiceD = document.createElement("td");
+              const choiceD_but = document.createElement('button');
+              choiceD_but.id = CHOICED+row.id  // establishes a BOOHOO JS id for cell
+              choiceD_but.innerHTML = row.choiceD;  // add fetched "boohoo count" to innerHTML
+              choiceD_but.onclick = function () {
+                // onclick function call with "jeer parameters"
+                console.log(choiceD_but.id);
+
+                reaction(CHOICED, choiceD_url+row.id, choiceD_but.id);  
+                if (choiceD_but.id == "choiceD1") {
+                  alert('Correct!');
+                } 
+
+                if (choiceD_but.id == "choiceD3") {
+                  alert('Correct!');
+                }
+              };
+             choiceD.appendChild(choiceD_but);  // add "boohoo button" to boohoo cell
+
+
+            // this builds ALL td's (cells) into tr (row) element
+            tr.appendChild(joke);
+            tr.appendChild(haha);
+            tr.appendChild(boohoo);
+            tr.appendChild(choiceC);
+            tr.appendChild(choiceD);
+
+
+
+            // this adds all the tr (row) work above to the HTML "result" container
+            resultContainer.appendChild(tr);
+            i+=4;
+          }
+      })
+  })
+  // catch fetch errors (ie Nginx ACCESS to server blocked)
+  .catch(err => {
+    error(err + " " + get_url);
+  });
+
+  // Reaction function to likes or jeers user actions
+  function reaction(type, put_url, elemID) {
+
+    // fetch the API
+    fetch(put_url, put_options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error("PUT API response failure: " + response.status)
+          return;  // api failure
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          // Likes or Jeers updated/incremented
+          if (type === HAHA) // like data element
+            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
+          else if (type === BOOHOO) // jeer data element
+            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          else if (type === CHOICEC) // jeer data element
+            document.getElementById(elemID).innerHTML = data.choiceC;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          else if (type === CHOICED) // jeer data element
+            document.getElementById(elemID).innerHTML = data.choiceD;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          else
+            error("unknown type: " + type);  // should never occur
+      })
+    })
+    // catch fetch errors (ie Nginx ACCESS to server blocked)
+    .catch(err => {
+      error(err + " " + put_url);
+    });
+    
+  }
+
+  // Something went wrong with actions or responses
+  function error(err) {
+    // log as Error in console
+    console.error(err);
+    // append error to resultContainer
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+
+  }
+
+</script>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/crimebustersproject1/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+        </div>
+        <div class="footer-col">
+          <p>Search for local crime and learn how to protect yourself.</p>
+        </div>
+      </div>
+  
+      <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/crimebustersproject1/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+  
+    </div>
+  
+  </footer></body>
+
+</html>
