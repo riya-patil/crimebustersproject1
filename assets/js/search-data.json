@@ -40,6 +40,17 @@
   
 
   
+      ,"page3": {
+          "title": "Safety Score Calculator",
+          "content": "&lt;!DOCTYPE html&gt; . Gravitational Calculators . Gravitation Calculator &lt;/h1&gt; . Number of Crimes: Total Number of People: Total Crime Score: &lt;/html&gt; .",
+          "url": "https://crimebusters.github.io/crimebustersproject1/safetyscorecalculator/",
+          "relUrl": "/safetyscorecalculator/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
 
@@ -63,7 +74,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://crimebusters.github.io/crimebustersproject1/robots.txt",
