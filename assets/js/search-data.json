@@ -63,6 +63,14 @@
   
 
   
+      ,"page9": {
+          "title": "World Crime News Table",
+          "content": "Stay informed about crime from around the world! . News News Link Source .",
+          "url": "https://crimebusters.github.io/crimebustersproject1/crimebusters/news",
+          "relUrl": "/crimebusters/news",
+          "date": ""
+      }
+      
   
 
   
@@ -72,7 +80,10 @@
   
 
   
-      ,"page12": {
+  
+
+  
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://crimebusters.github.io/crimebustersproject1/robots.txt",
