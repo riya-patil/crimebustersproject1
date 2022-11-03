@@ -471,7 +471,7 @@ li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
 
 .language-python + .language-plaintext pre { background-color: white !important; }
 
-.input_area pre, .input_area div { margin-bottom: 1.0rem !important; margin-top: 1.5rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #323443 !important; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: sans-serif, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, sans-serif; border-radius: 5px; font-size: 105%; }
+.input_area pre, .input_area div { margin-bottom: 1.0rem !important; margin-top: 1.5rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #323443 !important; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: Roboto, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, sans-serif; border-radius: 5px; font-size: 105%; }
 
 .output_area pre, .output_area div { margin-bottom: 1rem !important; margin-top: 0rem !important; padding-bottom: 0 !important; padding-top: 0 !important; }
 
@@ -517,5 +517,7 @@ li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
 .highlight .gd { color: #ff5555; }
 
 p code { font-size: 19px; }
+
+html, body, input, textarea, select { background-image: linear-gradient(to left, #a50000, #000095); }
 
 /*# sourceMappingURL=style.css.map */
