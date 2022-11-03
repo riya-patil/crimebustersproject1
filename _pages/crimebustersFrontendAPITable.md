@@ -1,5 +1,5 @@
 ---
-title: Crime Safety Quiz (Work In Progress)
+title: Crime Safety Quiz 
 layout: page
 permalink: /crimebusters/quiz
 ---
