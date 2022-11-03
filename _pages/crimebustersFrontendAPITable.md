@@ -4,7 +4,6 @@ layout: page
 permalink: /crimebusters/quiz
 ---
 
-# Crime Safety Quiz (Work In Progress)
 
 Quiz yourself on crime safety!
 
