@@ -1,41 +1,48 @@
 ---
 layout: default
 permalink: /Quiz/
-title: Safety Quiz
+title: Safety Survey
 search_exclude: true
 ---
 
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Safety Quiz</title>
+    <title>Safety Survey</title>
     </head>
 <body>
+What is your personal safety score?
 <font size="+1">
 <p style="font-family:'Helvetica'">
-<p>Question 1: What are some possible reasons crimes may go unreported??<br>
-<input type = "radio" name="question1" >People are hesitant to call out of fear they will be identified by the potential criminal<br>
-<input type = "radio" name="question1" >People take for granted that someone else has already contacted the police<br>
-<input type = "radio" name="question1" >They worry about being embarrassed if their suspicions prove to be unfounded<br>
-<input type = "radio" name="question1" id="correct1">All of the above<br></p>
+<p>Question 1: Do you have security cameras installed in your house?<br>
+<input type = "radio" name="question1" >No<br>
+<input type = "radio" name="question1" id="correct1">Yes<br></p>
 
-<p>Question 2: What should you do in the case someone breaks into your house?<br>
-<input type = "radio" name="question2" >Charge at them and take care of it yourself<br>
-<input type = "radio" name="question2" id="correct2">Hide somewhere safe and call the police<br>
-<input type = "radio" name="question2" >Give up your belongings and run from your house<br>
-<input type = "radio" name="question2" >Don't do anything<br></p>
+<p>Question 2: Are you up to date with local crime news and criminal activity?<br>
+<input type = "radio" name="question2" id="correct2">Yes<br>
+<input type = "radio" name="question2" >No<br>
+<input type = "radio" name="question2" id="correct2">Sometimes<br></p>
 
-<p>Question 3: Out of the following choices, which would be considered "suspicious activity"?<br>
-<input type = "radio" name="question3" >A vehicles moving slowly and without lights, or seemingly repetitive or suspicious<br>
-<input type = "radio" name="question3" >Containing one or more suspicious people observed at an unusual hour<br>
-<input type = "radio" name="question3" >Vehicles being loaded with valuables in front of closed businesses or residences<br>
-<input type = "radio" name="question3" id="correct3">All of the above<br></p>
+<p>Question 3: Do you keep your car unlocked at night and in public spaces? <br>
+<input type = "radio" name="question3" >Yes<br>
+<input type = "radio" name="question3" id="correct3">No<br>
+<input type = "radio" name="question3" >Sometimes</p>
 
-<p>Question 4: What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?<br>
-<input type = "radio" name="question4" >Run away in the other direction as fast as you can<br>
-<input type = "radio" name="question4" id="correct4">Give them your belongings and retreat a good distance away<br>
-<input type = "radio" name="question4" >Adamantly refuse to listen to their demands<br>
-<input type = "radio" name="question4" >Slowly back up at a slow pace and negotiate with the criminal<br></p>
+<p>Question 4: Have you downloaded any community safety apps? If so which ones?<br>
+<input type = "radio" name="question4" id="correct4">Yes, The Neighborhood App<br>
+<input type = "radio" name="question4" id="correct4">Yes, CityProtect<br>
+<input type = "radio" name="question4" id="correct4">Yes, both of the above or others<br>
+<input type = "radio" name="question4" >No<br></p>
+
+<p>Question 5: Do you have any anti-virus protection softwares on your computer?<br>
+<input type = "radio" name="question5" id="correct5">Yes<br>
+<input type = "radio" name="question5">No<br></p>
+
+<p>Question 6: How many times have your house or car gotten robbed?<br>
+<input type = "radio" name="question6">Several times<br>
+<input type = "radio" name="question6">1 time<br>
+<input type = "radio" name="question6" id="correct6">Never<br></p>
+
 </p>
 </font>
 
@@ -61,7 +68,15 @@ search_exclude: true
         {
             score++;
         }
-        document.write("Your score is: "+score+"!");
+        if (document.getElementById('correct5').checked)
+        {
+            score++;
+        }
+        if (document.getElementById('correct6').checked)
+        {
+            score++;
+        }
+        document.write("Your personal safety score is: "+score+" out of 6.");
     }
 </script>
 </body>
