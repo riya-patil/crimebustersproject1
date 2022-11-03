@@ -8,11 +8,7 @@ permalink: /crimebusters/quiz
 
 Quiz yourself on crime safety!
 
-**What this project currently does**: Currently, the quiz is in a table that has two answer choices: A and B. The table records the number of times people selected the answer choice.
-
-**To be added**: 
-* We are going to add two more answer choices to the table (C and D), and connect them to the backend using Spring Framework. The number of times users selected C and D will also be saved in a MYSQL database. 
-* After the user selects one of the answer choices, there will also be feedback given on whether the user selected the right or wrong answer choice. If the user selected the wrong answer, the correct answer will be displayed. 
+**What this project does**: This is a quiz that tests players on how much they understand about crime safety. It is in a table that records the number of times each answer choice is selected. The answer choices are connected to the backend using the Spring Framework. The number of times users selected the answer choices are saved in a MYSQL database. After the user selects one of the answer choices, there will also be feedback given on whether the user selected the right or wrong answer choice. 
 
 <br>
 
@@ -134,7 +130,11 @@ Quiz yourself on crime safety!
 
                 reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
 
-                if (boohoo_but.id == "boohoo2") {
+                if (boohoo_but.id == "boohoo1" || boohoo_but.id == "boohoo3") {
+                  alert('Incorrect. Try again.');
+                }
+
+                if (boohoo_but.id == "boohoo2" || boohoo_but.id == "boohoo4") {
                   alert('Correct!');
                 }
 
@@ -169,12 +169,12 @@ Quiz yourself on crime safety!
                 console.log(choiceD_but.id);
 
                 reaction(CHOICED, choiceD_url+row.id, choiceD_but.id);  
-                if (choiceD_but.id == "choiceD1") {
+                if (choiceD_but.id == "choiceD1" || choiceD_but.id == "choiceD3") {
                   alert('Correct!');
                 } 
 
-                if (choiceD_but.id == "choiceD3") {
-                  alert('Correct!');
+                if (choiceD_but.id == "choiceD2" || choiceD_but.id == "choiceD4") {
+                  alert('Incorrect. Try again.');
                 }
               };
              choiceD.appendChild(choiceD_but);  // add "boohoo button" to boohoo cell
