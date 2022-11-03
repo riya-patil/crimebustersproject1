@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Safety Quiz | Crimebusters</title>
+<title>Crime Trivia | Crimebusters</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Safety Quiz" />
+<meta property="og:title" content="Crime Trivia" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Search for local crime and learn how to protect yourself." />
 <meta property="og:description" content="Search for local crime and learn how to protect yourself." />
-<link rel="canonical" href="https://crimebusters.github.io/crimebustersproject1/Quiz/" />
-<meta property="og:url" content="https://crimebusters.github.io/crimebustersproject1/Quiz/" />
+<link rel="canonical" href="https://crimebusters.github.io/crimebustersproject1/crimetrivia/" />
+<meta property="og:url" content="https://crimebusters.github.io/crimebustersproject1/crimetrivia/" />
 <meta property="og:site_name" content="Crimebusters" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Safety Quiz" />
+<meta property="twitter:title" content="Crime Trivia" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Search for local crime and learn how to protect yourself.","headline":"Safety Quiz","url":"https://crimebusters.github.io/crimebustersproject1/Quiz/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Search for local crime and learn how to protect yourself.","headline":"Crime Trivia","url":"https://crimebusters.github.io/crimebustersproject1/crimetrivia/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/crimebustersproject1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://crimebusters.github.io/crimebustersproject1/feed.xml" title="Crimebusters" /><link rel="shortcut icon" type="image/x-icon" href="/crimebustersproject1/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -70,64 +70,33 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!DOCTYPE html>
-<html>
-    <head>
-    <title>Safety Quiz</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Interview Questions!</title>
+
+</head>
 <body>
-<font size="+1">
-<p style="font-family:'Helvetica'">
-<p>Question 1: What are some possible reasons crimes may go unreported??<br>
-<input type = "radio" name="question1" >People are hesitant to call out of fear they will be identified by the potential criminal<br>
-<input type = "radio" name="question1" >People take for granted that someone else has already contacted the police<br>
-<input type = "radio" name="question1" >They worry about being embarrassed if their suspicions prove to be unfounded<br>
-<input type = "radio" name="question1" id="correct1">All of the above<br></p>
+    <h2>Generate A Random Interview Question</h2>
+    <p>Practice for an upcoming interview!</p>
 
-<p>Question 2: What should you do in the case someone breaks into your house?<br>
-<input type = "radio" name="question2" >Charge at them and take care of it yourself<br>
-<input type = "radio" name="question2" id="correct2">Hide somewhere safe and call the police<br>
-<input type = "radio" name="question2" >Give up your belongings and run from your house<br>
-<input type = "radio" name="question2" >Don't do anything<br></p>
-
-<p>Question 3: Out of the following choices, which would be considered "suspicious activity"?<br>
-<input type = "radio" name="question3" >A vehicles moving slowly and without lights, or seemingly repetitive or suspicious<br>
-<input type = "radio" name="question3" >Containing one or more suspicious people observed at an unusual hour<br>
-<input type = "radio" name="question3" >Vehicles being loaded with valuables in front of closed businesses or residences<br>
-<input type = "radio" name="question3" id="correct3">All of the above<br></p>
-
-<p>Question 4: What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?<br>
-<input type = "radio" name="question4" >Run away in the other direction as fast as you can<br>
-<input type = "radio" name="question4" id="correct4">Give them your belongings and retreat a good distance away<br>
-<input type = "radio" name="question4" >Adamantly refuse to listen to their demands<br>
-<input type = "radio" name="question4" >Slowly back up at a slow pace and negotiate with the criminal<br></p>
-</p>
-</font>
-
-<input type="submit" name="submit" value="Submit Quiz" onclick="
-    result()">
-
-<script type="text/javascript">
-    function result() {
-        var score=0;
-        if (document.getElementById('correct1').checked)
+    <button onClick="window.location.reload();">Refresh</button>
+    <p id="demo"></p>
+    <script>
+        function rand_quest(items)
         {
-            score++;
+
+            return items[Math.floor(Math.random()*items.length)];
+
         }
-        if (document.getElementById('correct2').checked)
-        {
-            score++;
-        }
-        if (document.getElementById('correct3').checked)
-        {
-            score++;
-        }
-        if (document.getElementById('correct4').checked)
-        {
-            score++;
-        }
-        document.write("Your score is: "+score+"!");
-    }
-</script>
+        var questions = [
+            "From July 1, 2018, through June 30, 2019, a total of 39 school-associated violent deaths1 occurred in the United States, including students, staff, and other nonstudent school-associated victims. Of these 39 school-associated violent deaths, 10 homicides and 3 suicides were of school-age youth (ages 5–18, also referred to as “youth” in this Fast Fact).2 Considering all persons, there were 29 homicides and 10 suicides. Between 1992–93 (when data collection began) and 2018–19, the number of school-associated violent deaths of all persons fluctuated, ranging from 32 to 63.",
+            "During the 2019–20 school year,5 77 percent of public schools recorded that one or more incidents of crime had taken place, amounting to 1.4 million incidents. This translates to a rate of 29 incidents per 1,000 students enrolled in 2019–20. Not all recorded incidents of crime were reported to sworn law enforcement. In 2019–20, some 47 percent of schools reported one or more incidents of crime to sworn law enforcement, amounting to 482,400 incidents, or 10 incidents per 1,000 students enrolled.",
+            "From 2009 to 2020, the total victimization rate decreased for students ages 12–18, both at school and away from school.3 The total victimization rate at school decreased from 51 victimizations per 1,000 students in 2009 to 30 victimizations per 1,000 students in 2019. From 2019 to 2020, the total victimization rate at school continued to decrease to 11 victimizations per 1,000 students—a decrease of more than 60 percent.4 The total victimization rate away from school decreased from 33 victimizations per 1,000 students in 2009 to 20 victimizations per 1,000 students in 2019. The total victimization rate away from school in 2020 (15 victimizations per 1,000 students) was not statistically different from the rate in 2019.",
+            "In 21.9% of all cases, the offender was convicted of an offense carrying a mandatory minimum penalty",
+        ];
+        document.getElementById("demo").innerHTML = rand_quest(questions)
+    </script>
 </body>
 </html>
       </div>
