@@ -46,7 +46,6 @@ What is your personal safety score?
 </font>
 
 <input type="submit" name="submit" value="Submit Quiz" onclick="result()">
-<p id="result"><span></span></p>
 
 <script type="text/javascript">
     function result() {
@@ -75,7 +74,7 @@ What is your personal safety score?
         {
             score++;
         }
-        result.innerHTML="Your personal safety score is: "+score+" out of 6.";
+        document.write("Your personal safety score is: "+score+" out of 6.");
     }
 </script>
 </body>
