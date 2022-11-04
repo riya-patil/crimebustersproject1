@@ -76,12 +76,12 @@ window.onload = wrap_img;
     </head>
 <body>
 What is your personal safety score?
-<font size="+1">
-<p style="font-family:'Helvetica'">
+<font size="+1"> 
+<!-- changes the font size to make it more visible to audience -->
 <p>Question 1: Do you have security cameras installed in your house?<br>
 <input type = "radio" name="question1" >No<br>
 <input type = "radio" name="question1" id="correct1">Yes<br></p>
-
+<!-- question id makes it that the id is correct for a certain option -->
 <p>Question 2: Are you up to date with local crime news and criminal activity?<br>
 <input type = "radio" name="question2" id="correct2">Yes<br>
 <input type = "radio" name="question2" >No<br>
@@ -111,9 +111,11 @@ What is your personal safety score?
 
 <input type="submit" name="submit" value="Submit Quiz" onclick="result()">
 <h2 style="text-shadow: 7px;"><span id="score"></span></h2>
+<!-- creates the submit button and makes the score display at the bottom 
+instead of in a separate document-->
 
 <script type="text/javascript">
-    function result() {
+    function result() { //creates a function to calculate final score
         var score=0;
         if (document.getElementById('correct1').checked)
         {
@@ -137,10 +139,10 @@ What is your personal safety score?
         }
         if (document.getElementById('correct6').checked)
         {
-            score++;
+            score++; //score increases as questions correct increases
         }
         document.getElementById('score').innerHTML= "Your personal safety score is " +score+ " out of 6.";
-    }
+    } //gets element of score and sets it in a sentence to tell test taker what they got
 </script>
 </body>
 </html>
