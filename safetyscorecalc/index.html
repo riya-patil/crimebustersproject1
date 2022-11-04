@@ -99,8 +99,10 @@ window.onload = wrap_img;
 <body>
     <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
         <form name="crimescore">
+            // input = crimenum
             Number of Crimes: <input type="text" name="crimenum">
             <br>
+            // input = people
             Total Number of People: <input type="text" name="people">
             <br>
             Total Crime Score: <input type="text" name="totcs">
@@ -113,6 +115,7 @@ window.onload = wrap_img;
             var cn, pn;
             cn=Number(document.crimescore.crimenum.value);
             pn=Number(document.crimescore.people.value);
+            // division
             finalcrimescore=((cn)/(pn));
             document.crimescore.totcs.value=finalcrimescore;
            } 
@@ -121,6 +124,7 @@ window.onload = wrap_img;
     <img src="https://user-images.githubusercontent.com/32562016/199586508-a260bac2-1819-4945-90df-cfd2e30970ef.png" width="1000">
 </body>
 </html>
+
       </div>
     </main><footer class="site-footer h-card">
     <data class="u-url" href="/crimebustersproject1/"></data>
