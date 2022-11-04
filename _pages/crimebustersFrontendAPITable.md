@@ -55,7 +55,7 @@ Quiz yourself on crime safety!
   const choiceA_url = url + "/choiceA/";  // choiceA reaction
   const choiceB_url = url + "/choiceB/";  // choiceB reaction
   const choiceC_url = url + "/choiceC/";  // choiceC option
-  const choiceD_url = url + "/choiceD/";  // choiceC option
+  const choiceD_url = url + "/choiceD/";  // choiceD option
 
 
   // prepare fetch GET options
@@ -110,7 +110,7 @@ Quiz yourself on crime safety!
                 // onclick function call with "like parameters"
                 reaction(CHOICEA, choiceA_url+row.id, choiceA_but.id);  
                 console.log(choiceA_but.id);
-                
+                // prompt for correct or incorrect
                 for (let i = 1; i <= 4; i++) {
                   if (choiceA_but.id == "choiceA".concat(String(i))) {
                   alert('Incorrect. Try again.');
@@ -131,7 +131,7 @@ Quiz yourself on crime safety!
                 console.log(choiceB_but.id);
 
                 reaction(CHOICEB, choiceB_url+row.id, choiceB_but.id);  
-
+                // prompt for correct or incorrect
                 if (choiceB_but.id == "choiceB1" || boohoo_but.id == "choiceB3") {
                   alert('Incorrect. Try again.');
                 }
@@ -152,7 +152,8 @@ Quiz yourself on crime safety!
                 console.log(choiceC_but.id);
 
                 reaction(CHOICEC, choiceC_url+row.id, choiceC_but.id); 
-                
+                                      
+                // prompt for correct or incorrect
                 for (let i = 1; i <= 4; i++) {
                   if (choiceC_but.id == "choiceC".concat(String(i))) {
                   alert('Incorrect. Try again.');
@@ -170,7 +171,9 @@ Quiz yourself on crime safety!
                 // onclick function call with "jeer parameters"
                 console.log(choiceD_but.id);
 
-                reaction(CHOICED, choiceD_url+row.id, choiceD_but.id);  
+                reaction(CHOICED, choiceD_url+row.id, choiceD_but.id); 
+  
+                // prompt for correct or incorrect
                 if (choiceD_but.id == "choiceD1" || choiceD_but.id == "choiceD3") {
                   alert('Correct!');
                 } 
@@ -202,7 +205,7 @@ Quiz yourself on crime safety!
     error(err + " " + get_url);
   });
 
-  // Reaction function to likes or jeers user actions
+  // Reaction functions
   function reaction(type, put_url, elemID) {
 
     // fetch the API
