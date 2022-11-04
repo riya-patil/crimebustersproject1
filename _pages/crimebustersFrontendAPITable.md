@@ -52,8 +52,8 @@ Quiz yourself on crime safety!
   // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
   const url = "https://crimebusters.nighthawkcoding.ml/api/quiz";
   const get_url = url +"/";
-  const like_url = url + "/like/";  // choiceA reaction
-  const jeer_url = url + "/jeer/";  // choiceB reaction
+  const choiceA_url = url + "/choiceA/";  // choiceA reaction
+  const choiceB_url = url + "/choiceB/";  // choiceB reaction
   const choiceC_url = url + "/choiceC/";  // choiceC option
   const choiceD_url = url + "/choiceD/";  // choiceC option
 
@@ -108,7 +108,7 @@ Quiz yourself on crime safety!
               choiceA_but.innerHTML = row.choiceA;  // add fetched "haha count" to innerHTML
               choiceA_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(CHOICEA, like_url+row.id, choiceA_but.id);  
+                reaction(CHOICEA, choiceA_url+row.id, choiceA_but.id);  
                 console.log(choiceA_but.id);
                 
                 for (let i = 1; i <= 4; i++) {
@@ -130,7 +130,7 @@ Quiz yourself on crime safety!
                 // onclick function call with "jeer parameters"
                 console.log(choiceB_but.id);
 
-                reaction(CHOICEB, jeer_url+row.id, choiceB_but.id);  
+                reaction(CHOICEB, choiceB_url+row.id, choiceB_but.id);  
 
                 if (choiceB_but.id == "choiceB1" || boohoo_but.id == "choiceB3") {
                   alert('Incorrect. Try again.');
