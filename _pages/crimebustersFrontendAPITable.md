@@ -103,10 +103,10 @@ Quiz yourself on crime safety!
             // td for choiceA cell with onclick actions
             const choiceA = document.createElement("td");
               const choiceA_but = document.createElement('button');
-              choiceA_but.id = CHOICEA+row.id   // establishes a HAHA JS id for cell
-              choiceA_but.innerHTML = row.choiceA;  // add fetched "haha count" to innerHTML
+              choiceA_but.id = CHOICEA+row.id   // establishes a choiceA JS id for cell
+              choiceA_but.innerHTML = row.choiceA;  // add fetched "choiceA count" to innerHTML
               choiceA_but.onclick = function () {
-                // onclick function call with "like parameters"
+                // onclick function call with "choiceA parameters"
                 reaction(CHOICEA, choiceA_url+row.id, choiceA_but.id);  
                 console.log(choiceA_but.id);
                 // prompt for correct or incorrect
@@ -118,7 +118,7 @@ Quiz yourself on crime safety!
                 
                
               };
-              choiceA.appendChild(choiceA_but);  // add "haha button" to haha cell
+              choiceA.appendChild(choiceA_but);  // add "choiceA button" to choiceA cell
 
             // td for choiceB cell with onclick actions
             const choiceB = document.createElement("td");
@@ -126,12 +126,12 @@ Quiz yourself on crime safety!
               choiceB_but.id = CHOICEB+row.id  // establishes a CHOICEB JS id for cell
               choiceB_but.innerHTML = row.choiceB;  // add fetched "choiceB count" to innerHTML
               choiceB_but.onclick = function () {
-                // onclick function call with "jeer parameters"
+                // onclick function call with "choiceB parameters"
                 console.log(choiceB_but.id);
 
                 reaction(CHOICEB, choiceB_url+row.id, choiceB_but.id);  
                 // prompt for correct or incorrect
-                if (choiceB_but.id == "choiceB1" || boohoo_but.id == "choiceB3") {
+                if (choiceB_but.id == "choiceB1" || choiceB_but.id == "choiceB3") {
                   alert('Incorrect. Try again.');
                 }
 
@@ -144,10 +144,10 @@ Quiz yourself on crime safety!
              // choiceC
              const choiceC = document.createElement("td");
               const choiceC_but = document.createElement('button');
-              choiceC_but.id = CHOICEC+row.id  // establishes a BOOHOO JS id for cell
-              choiceC_but.innerHTML = row.choiceC;  // add fetched "boohoo count" to innerHTML
+              choiceC_but.id = CHOICEC+row.id  // establishes a choiceC JS id for cell
+              choiceC_but.innerHTML = row.choiceC;  // add fetched "choiceC count" to innerHTML
               choiceC_but.onclick = function () {
-                // onclick function call with "jeer parameters"
+                // onclick function call with "choiceB parameters"
                 console.log(choiceC_but.id);
 
                 reaction(CHOICEC, choiceC_url+row.id, choiceC_but.id); 
@@ -167,7 +167,7 @@ Quiz yourself on crime safety!
               choiceD_but.id = CHOICED+row.id  
               choiceD_but.innerHTML = row.choiceD;  
               choiceD_but.onclick = function () {
-                // onclick function call with "jeer parameters"
+                // onclick function call with "choiceD parameters"
                 console.log(choiceD_but.id);
 
                 reaction(CHOICED, choiceD_url+row.id, choiceD_but.id); 
@@ -219,14 +219,14 @@ Quiz yourself on crime safety!
       // valid response will have JSON data
       response.json().then(data => {
           console.log(data);
-          // Likes or Jeers updated/incremented
-          if (type === CHOICEA) // like data element
+          // Choices updated/incremented
+          if (type === CHOICEA) // choiceA data element
             document.getElementById(elemID).innerHTML = data.choiceA;  // fetched choiceA data assigned to choiceA Document Object Model (DOM)
-          else if (type === CHOICEB) // jeer data element
+          else if (type === CHOICEB) // choiceB data element
             document.getElementById(elemID).innerHTML = data.choiceB;  // fetched choiceB data assigned to choiceB Document Object Model (DOM)
-          else if (type === CHOICEC) // jeer data element
+          else if (type === CHOICEC) // choiceC data element
             document.getElementById(elemID).innerHTML = data.choiceC;  // fetched choiceC data assigned to choiceC Document Object Model (DOM)
-          else if (type === CHOICED) // jeer data element
+          else if (type === CHOICED) // choiceD data element
             document.getElementById(elemID).innerHTML = data.choiceD;  // fetched choiceD data assigned to choiceD Document Object Model (DOM)
           else
             error("unknown type: " + type);  // should never occur
