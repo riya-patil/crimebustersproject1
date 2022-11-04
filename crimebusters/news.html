@@ -137,20 +137,19 @@ fetch('https://world-crime-news1.p.rapidapi.com/news', options)
             // tr for each row
             const tr = document.createElement("tr");
             // td for each column
-            const name = document.createElement("td");
-            const cases = document.createElement("td");
-            const deaths = document.createElement("td");
-            const active = document.createElement("td");
+            const news = document.createElement("td");
+            const link = document.createElement("td");
+            const source = document.createElement("td");
 
             // data is specific to the API
-            name.innerHTML = row.title;
-            cases.innerHTML = row.url; 
-            deaths.innerHTML = row.source; 
+            news.innerHTML = row.title;
+            link.innerHTML = row.url; 
+            source.innerHTML = row.source; 
 
             // this build td's into tr
-            tr.appendChild(name);
-            tr.appendChild(cases);
-            tr.appendChild(deaths);
+            tr.appendChild(news);
+            tr.appendChild(link);
+            tr.appendChild(source);
 
             // add HTML to container
             resultContainer.appendChild(tr);
