@@ -17,7 +17,6 @@ Quiz yourself on crime safety!
 
 
 <!-- HTML table fragment for page -->
-// table
 
 <table>
   <thead>
